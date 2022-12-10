@@ -3,6 +3,7 @@ import ApplicationLogo from './ApplicationLogo';
 import { HiOutlineClipboardList } from 'react-icons/hi';
 import { Link } from 'react-router-dom';
 import { FiUser } from 'react-icons/fi';
+import SearchBar from './SearchBar';
 
 export default function Navabr({ auth }) {
   const isLogin = () => {
@@ -38,9 +39,14 @@ export default function Navabr({ auth }) {
   };
 
   return (
-    <div className="navbar bg-base-100 px-9 shadow-md">
-      <div className="navbar-start">
-        <ApplicationLogo />
+    <div className="navbar bg-base-100 px-9 py-0 shadow-md">
+      <div className="navbar-start flex items-center">
+        <Link to="/">
+          <ApplicationLogo />
+        </Link>
+      </div>
+      <div className="navbar-center">
+        <SearchBar />
       </div>
       <div className="navbar-end">
         {isLogin()}

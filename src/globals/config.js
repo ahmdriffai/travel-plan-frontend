@@ -1,5 +1,5 @@
 const CONFIG = {
-  BASE_URL: 'http://localhost:8000/api',
+  BASE_URL: 'https://api.tourin-travel.my.id/api',
   LOCAL_STORAGE_NAME: 'accessToken',
 };
 

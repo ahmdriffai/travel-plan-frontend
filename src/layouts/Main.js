@@ -6,7 +6,7 @@ export default function Main({ auth, children }) {
   return (
     <>
       <Navabr auth={auth} />
-      <div className="main px-10 min-h-screen">
+      <div className="main px-20 min-h-screen">
         {children}
       </div>
       <Footer />

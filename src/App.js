@@ -4,6 +4,7 @@ import AuthApi from './data/auth-api';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import Search from './pages/Search';
 import { putAccessToken } from './utils/common';
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
   const onLoginSuccess = async (accessToken) => {
     putAccessToken(accessToken);
     const data = await AuthApi.getUserLogin();
+    setInitializing(false);
     setAuthUser(data.data.user);
   };
 
@@ -32,8 +34,9 @@ function App() {
   return (
     <Routes>
       <Route path="/register" element={<Register loginSuccess={onLoginSuccess} />} />
-      <Route path="/" element={<Home auth={authUser} />} />
       <Route path="/login" element={<Login loginSuccess={onLoginSuccess} />} />
+      <Route path="/" element={<Home auth={authUser} />} />
+      <Route path="/search" element={<Search auth={authUser} />} />
     </Routes>
   );
 }
