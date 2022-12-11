@@ -10,9 +10,13 @@ const API_ENDPOINT = {
     search = '', sort = 'ASC', page = 1, size = 10, category = 'penginapan',
   }) => `${CONFIG.BASE_URL}/places?search=${search}&page=${page}&sort=${sort}&size=${size}&category=${category}`,
 
+  PLACE_BY_ID: (id) => `${CONFIG.BASE_URL}/places/${id}`,
   //  category
 
   ALL_CATEGORIES: `${CONFIG.BASE_URL}/categories`,
+
+  // list place
+  ADD_LIST_TRAVEL: `${CONFIG.BASE_URL}/list-travel`,
 };
 
 export default API_ENDPOINT;
