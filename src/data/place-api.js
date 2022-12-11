@@ -18,6 +18,18 @@ class PlaceApi {
     return responseJson;
   }
 
+  static async getPlaceById(id) {
+    const response = await fetchWithToken(API_ENDPOINT.PLACE_BY_ID(id), {
+      method: 'GET',
+      headers: {
+        Accept: 'application/json',
+      },
+    });
+
+    const responseJson = await response.json();
+    return responseJson;
+  }
+
   static async gatAllByCategory({ category }) {
     const response = await fetchWithToken(API_ENDPOINT.ALL_PLACE({ category }), {
       method: 'GET',

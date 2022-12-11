@@ -72,12 +72,14 @@ export default function PlaceRecomendation({ places, displayName }) {
         Rekomendasi
         {' '}
         {displayName}
-        <Link to="/" className="text-sm ml-4 font-bold text-purple-700 hover:text-purple-900">Lihat Semua</Link>
+        <Link to="/search" className="text-sm ml-4 font-bold text-purple-700 hover:text-purple-900">Lihat Semua</Link>
       </h2>
       <Slider {...settings} className="bg-slate-200 rounded-lg">
         {
         places.map((place) => (
-          <PlaceItem place={place} key={place.id} />
+          <Link to={`/place/${place.id}`}>
+            <PlaceItem place={place} key={place.id} />
+          </Link>
         ))
       }
       </Slider>

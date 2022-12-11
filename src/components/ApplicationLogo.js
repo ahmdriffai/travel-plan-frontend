@@ -5,7 +5,7 @@ export default function ApplicationLogo() {
   return (
     <h1 className="text-xl font-bold flex">
       <span className="text-green-700 mr-2"><BiMapAlt size={25} /></span>
-      Travel Plan.
+      Tourin Travel.
     </h1>
   );
 }

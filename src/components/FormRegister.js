@@ -1,5 +1,6 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { Link } from 'react-router-dom';
 
 export default function FormRegister(props) {
   const { register, handleSubmit, formState: { errors } } = useForm();
@@ -34,11 +35,13 @@ export default function FormRegister(props) {
           <label className="label">
             <span className="label-text">Password</span>
           </label>
-          <input type="text" {...register('password', { required: 'this is requred', min: 3 })} placeholder="password" className="input input-bordered" />
+          <input type="password" {...register('password', { required: 'this is requred', min: 3 })} placeholder="password" className="input input-bordered" />
           <p className="text-xs text-red-600 mt-2 ml-1">{errors.password?.message}</p>
 
-          <label className="label">
-            <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
+          <label className="mt-5 ml-2 label-text-alt text-black">
+            Sudah Punya Akun ?
+            {' '}
+            <Link to="/login" className="label-text-alt link link-hover text-primary">Login</Link>
           </label>
         </div>
         <div className="form-control mt-6">

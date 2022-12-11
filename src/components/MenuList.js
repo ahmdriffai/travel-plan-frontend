@@ -1,5 +1,6 @@
 import React from 'react';
 import { MdTravelExplore } from 'react-icons/md';
+import { Link } from 'react-router-dom';
 import MenuItem from './MenuItem';
 
 export default function MenuList() {
@@ -14,7 +15,11 @@ export default function MenuList() {
       <div className="flex w-ful mt-2 justify-start items-start flex-wrap">
         {
           // eslint-disable-next-line react/no-array-index-key
-          menus.map((menu, i) => (<MenuItem icon={menu.icon} name={menu.name} key={i} />))
+          menus.map((menu, i) => (
+            <Link to="/search">
+              <MenuItem icon={menu.icon} name={menu.name} key={i} />
+            </Link>
+          ))
         }
       </div>
     </div>

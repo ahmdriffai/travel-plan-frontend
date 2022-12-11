@@ -5,6 +5,7 @@ import App from './App';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { BrowserRouter } from 'react-router-dom';
+import 'mapbox-gl/dist/mapbox-gl.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // eslint-disable-next-line react/jsx-filename-extension

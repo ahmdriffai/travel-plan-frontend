@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function PlaceItem({ place }) {
   return (
-    <div className="bg-base-100 shadow-xl my-5 cursor-pointer">
+    <div className="bg-base-100 shadow-xl my-5 cursor-pointer mx-5">
       <figure className="rounded"><img src="https://placeimg.com/400/225/arch" alt={place.name} /></figure>
       <div className="p-4">
         <small className="text-xs">{place.rating}</small>
