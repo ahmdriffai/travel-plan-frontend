@@ -4,6 +4,7 @@ import Main from '../layouts/Main';
 import MenuList from '../components/MenuList';
 import PlaceApi from '../data/place-api';
 import PlaceRecomendation from '../components/PlaceRecomendation';
+import MapGoogle from '../components/MapGoogle';
 
 export default function Home({ auth }) {
   const [wisata, setWisata] = React.useState([]);
@@ -25,6 +26,7 @@ export default function Home({ auth }) {
   return (
     <Main auth={auth}>
       <Hero />
+      <MapGoogle />
       <MenuList />
       <PlaceRecomendation places={wisata} displayName="Wisata" />
       <PlaceRecomendation places={wisata} displayName="Penginapan" />
